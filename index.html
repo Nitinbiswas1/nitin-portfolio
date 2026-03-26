@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nitin Biswas – Personal Website</title>
+    <meta
+      name="description"
+      content="My name is Nitin Biswas. I am a software engineer and data scientist with a passion for problem-solving, machine learning, and full-stack development."
+    />
+
+    <link rel="icon" type="image/png" href="/icon/32x32.png" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/180x180.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Nitin Biswas – Personal Website"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#f6d4b1" />
+
+    <meta property="og:title" content="Nitin Biswas – Personal Website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nitinbiswas.dev/" />
+    <meta property="og:image" content="/icon/og-img1.png" />
+    <meta
+      name="og:description"
+      content="My name is Nitin Biswas. I am a software engineer and data scientist with a passion for problem-solving, machine learning, and full-stack development."
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+
+  <body>
+    <div id="home"></div>
+
+    <canvas class="webgl"></canvas>
+
+    <div id="hero-backup">
+      <h3>Hi there, I’m</h3>
+      <h1>Nitin</h1>
+      <ul>
+        <li>Software Engineer</li>
+        <li>Data Scientist</li>
+      </ul>
+    </div>
+
+    <nav>
+      <div class="menu-btn">
+        <button class="btn" onclick="toggleMenu()">
+          <svg width="16" height="16">
+            <rect class="st0" width="16" height="3.2" />
+            <rect y="6.4" class="st0" width="16" height="3.2" />
+            <rect y="12.8" class="st0" width="16" height="3.2" />
+          </svg>
+        </button>
+        <div style="display: flex">
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/nitinbiswas"
+            target="_blank"
+          >
+            <svg width="16" height="16">
+              <path
+                d="M0.1,2c0-1,0.8-1.8,1.9-1.8c1,0,1.8,0.9,1.8,1.8c0,1-0.8,1.9-1.8,1.9C0.9,3.9,0.1,3.1,0.1,2z M0.1,5h3.7v9.8
+                H0.1V5z"
+              />
+              <path
+                d="M15.9,8.5v6.2h-3.5V9.4c0-0.9-0.6-1.6-1.5-1.6c-0.8,0-1.4,0.6-1.4,1.5v5.5H5.8V5h3.7v1
+                c0.6-0.7,1.6-1.2,2.8-1.2C14.4,4.7,15.9,6.3,15.9,8.5z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn"
+            href="https://github.com/Nitinbiswas1"
+            target="_blank"
+          >
+            <svg width="16" height="16">
+              <path
+                d="M10.6,12.9c0-1-0.3-1.6-0.7-2c2.4-0.3,4.9-1.1,4.9-5.2c0-1.1-0.4-2.1-1.1-2.9c0.1-0.3,0.5-1.3-0.1-2.8
+                c0,0-0.9-0.3-3,1.1c-1.7-0.5-3.6-0.5-5.4,0c-2-1.4-3-1.1-3-1.1C1.6,1.4,2,2.5,2.1,2.8C1.4,3.5,1,4.6,1,5.6c0,4.1,2.5,5,4.9,5.3
+                c-0.4,0.4-0.6,0.9-0.7,1.4c-0.6,0.3-2.2,0.7-3.1-0.9c0,0-0.6-1-1.6-1.1c0,0-1.1,0-0.1,0.7c0,0,0.7,0.3,1.1,1.6c0,0,0.6,2.1,3.6,1.5
+                c0,0.9,0,1.8,0,1.8h5.3C10.6,15.9,10.6,14.4,10.6,12.9z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn"
+            href="mailto:nitinbiswas90@gmail.com"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-body" onclick="closeMenu()">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#aboutMe" onclick="closeMenu()">About</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#education" onclick="closeMenu()">Education</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </div>
+
+      <div id="tip-scroll">Scroll &#8595;</div>
+    </nav>
+
+    <main>
+      <section>
+        <h1 id="aboutMe">Hi there</h1>
+        <div class="portrait" style="margin-bottom: 32px;">
+          <img src="/profile.jpg" alt="Nitin Biswas" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; filter: sepia(0.3) contrast(1.2);" />
+        </div>
+        <p>
+          My name is Nitin Biswas. I am a highly motivated computer science student and software engineer with a strong foundation in problem-solving and full-stack development. I am passionate about leveraging machine learning and modern web technologies to create impactful solutions.
+        </p>
+      </section>
+
+      <section>
+        <h1 id="skills">Skills</h1>
+        <div class="skill-grid" style="margin-top: 2rem; margin-bottom: 2rem;">
+
+          <!-- Frameworks: First since they are core web Dev dependencies and important -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" /></div>
+                <div class="skill-card-title">HTML</div>
+              </div>
+              <div class="skill-card-percent">95%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" /></div>
+                <div class="skill-card-title">CSS</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+                <div class="skill-card-title">JavaScript</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">Languages</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" /></div>
+                <div class="skill-card-title">Python</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">Languages</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" /></div>
+                <div class="skill-card-title">Java</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Languages</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" /></div>
+                <div class="skill-card-title">C++</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Languages</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" /></div>
+                <div class="skill-card-title">C</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">Languages</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" /></div>
+                <div class="skill-card-title">Bootstrap</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" /></div>
+                <div class="skill-card-title">Node.js</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+                <div class="skill-card-title">MongoDB</div>
+              </div>
+              <div class="skill-card-percent">75%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <!-- ML / Data Science -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas" /></div>
+                <div class="skill-card-title">Pandas</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="Numpy" /></div>
+                <div class="skill-card-title">Numpy</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">SK</div>
+                <div class="skill-card-title">Scikit-learn</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">PL</div>
+                <div class="skill-card-title">Matplotlib</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /></div>
+                <div class="skill-card-title">TensorFlow</div>
+              </div>
+              <div class="skill-card-percent">75%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" alt="PyTorch" /></div>
+                <div class="skill-card-title">PyTorch</div>
+              </div>
+              <div class="skill-card-percent">70%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">ST</div>
+                <div class="skill-card-title">Streamlit</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">SN</div>
+                <div class="skill-card-title">Seaborn</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">XG</div>
+                <div class="skill-card-title">XG Boost</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">ML Libraries</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="Apache Hadoop" /></div>
+                <div class="skill-card-title">Apache Hadoop</div>
+              </div>
+              <div class="skill-card-percent">65%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 65%;"></div></div>
+            <div class="skill-card-bottom">Frameworks</div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" /></div>
+                <div class="skill-card-title">GitHub</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">Tools</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
+                <div class="skill-card-title">MySQL</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Tools</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">XL</div>
+                <div class="skill-card-title">MS Excel</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Tools</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">PB</div>
+                <div class="skill-card-title">Power BI</div>
+              </div>
+              <div class="skill-card-percent">75%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            <div class="skill-card-bottom">Tools</div>
+          </div>
+
+          <!-- Core CS -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">DS</div>
+                <div class="skill-card-title">Data Structures</div>
+              </div>
+              <div class="skill-card-percent">90%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-card-bottom">Core CS</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="OS" /></div>
+                <div class="skill-card-title">Operating System</div>
+              </div>
+              <div class="skill-card-percent">85%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            <div class="skill-card-bottom">Core CS</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-left">
+                <div class="skill-card-icon">NW</div>
+                <div class="skill-card-title">Networks</div>
+              </div>
+              <div class="skill-card-percent">80%</div>
+            </div>
+            <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-card-bottom">Core CS</div>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <h1 id="projects">Projects</h1>
+        <hr />
+        
+        <h2>Customer Churn Prediction</h2>
+        <h3>Mar 2025</h3>
+        <ul class="skills">
+          <li>Python</li>
+          <li>Pandas</li>
+          <li>Scikit-learn</li>
+          <li>Machine Learning</li>
+        </ul>
+        <p>
+          Developed a machine learning model to predict telecom customer churn using usage patterns, contract details, and demographic data from a dataset of 1,00,000+ customers.
+        </p>
+        <p>
+          Conducted EDA by handling missing values, detecting outliers, and analyzing feature correlations, improving data quality and identifying key churn factors such as tenure and contract type.
+        </p>
+        <p>
+          Trained and evaluated models using ROC-AUC, Precision, Recall, and F1-score, achieving around 0.80+ predictive performance.
+        </p>
+        <hr />
+
+        <h2>EcoChoice AI</h2>
+        <h3>Feb 2025</h3>
+        <ul class="skills">
+          <li>HTML/CSS</li>
+          <li>Tailwind CSS</li>
+          <li>Node.js</li>
+          <li>Gemini API</li>
+          <li>AI Chat Assistant</li>
+        </ul>
+        <p>
+          Created a web application that recommends sustainable and eco-friendly products using an integrated AI chat assistant powered by Gemini Flash 1.5.
+        </p>
+        <p>
+          Enabled users to explore eco-friendly alternatives through natural language queries and personalised AI recommendations.
+        </p>
+        <hr />
+        
+        <h2>Retro Portfolio Website</h2>
+        <h3>Mar 2026</h3>
+        <ul class="skills">
+          <li>HTML/CSS</li>
+          <li>TypeScript</li>
+          <li>Three.js</li>
+        </ul>
+        <p>
+          A highly interactive and stylized retro-themed portfolio website featuring a full 3D environment powered by Three.js.
+        </p>
+        <p>
+          Includes a fully functional mock UNIX terminal and file system, allowing users to interact with my projects and information using standard shell commands.
+        </p>
+        <hr />
+      </section>
+
+      <section>
+        <h1 id="education">Education & Training</h1>
+        <hr />
+        <h2>Lovely Professional University</h2>
+        <h3>Aug 2023 - Present</h3>
+        <ul class="skills">
+          <li>B.Tech CSE</li>
+          <li>CGPA: 8.27</li>
+        </ul>
+        <p>Bachelor of Technology - Computer Science and Engineering.</p>
+        <hr />
+        
+        <h2>Mastering Data Structures and Algorithms</h2>
+        <h3>Jul 2025</h3>
+        <ul class="skills">
+          <li>C++</li>
+          <li>Algorithms</li>
+        </ul>
+        <p>
+          Gained hands-on experience with core data structures and algorithms, improved problem-solving skills through practical coding challenges, and strengthened understanding of time/space complexity and efficient coding practices at Centre for Professional Enhancement.
+        </p>
+        <hr />
+        
+        <h2>Certificates & Achievements</h2>
+        <div class="cert-grid" style="margin-top: 2rem;">
+          
+          <div class="cert-card">
+            <div class="cert-image"><img src="https://placehold.co/600x400/525252/f6d4b1?text=Hardware+%26+OS&font=Source+Sans+Pro" alt="Hardware and OS" /></div>
+            <div class="cert-content">
+              <div class="cert-title">Introduction to Hardware and OS</div>
+              <div class="cert-desc">Foundational training in computer hardware components and operating systems concepts.</div>
+              <div class="cert-footer">
+                <span>IBM | Coursera</span>
+                <span>Oct 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image"><img src="https://placehold.co/600x400/525252/f6d4b1?text=Networking&font=Source+Sans+Pro" alt="Networking" /></div>
+            <div class="cert-content">
+              <div class="cert-title">Bits and Bytes of Networking</div>
+              <div class="cert-desc">Comprehensive certification in computer networking protocols, architecture, and internet infrastructure.</div>
+              <div class="cert-footer">
+                <span>Google | Coursera</span>
+                <span>Sep 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image"><img src="https://placehold.co/600x400/525252/f6d4b1?text=Cloud+Computing&font=Source+Sans+Pro" alt="Cloud Computing" /></div>
+            <div class="cert-content">
+              <div class="cert-title">Cloud Computing</div>
+              <div class="cert-desc">Rigorous credential for cloud deployment models, services, architectures, and standard practices.</div>
+              <div class="cert-footer">
+                <span>NPTEL</span>
+                <span>Nov 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image"><img src="https://api.dicebear.com/9.x/shapes/svg?seed=HackerRank&backgroundColor=f6d4b1" alt="HackerRank" /></div>
+            <div class="cert-content">
+              <div class="cert-title">5-Star in Python & C++</div>
+              <div class="cert-desc">Achieved top-tier problem-solving ranking on HackerRank for both foundational and object-oriented programming.</div>
+              <div class="cert-footer">
+                <span>HackerRank</span>
+                <span>Dec 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image"><img src="https://api.dicebear.com/9.x/shapes/svg?seed=Hackathon&backgroundColor=f6d4b1" alt="Hackathon" /></div>
+            <div class="cert-content">
+              <div class="cert-title">3rd Rank - Binary Blitz</div>
+              <div class="cert-desc">Secured podium position in university-level competitive programming hackathon navigating complex logic bugs rapidly.</div>
+              <div class="cert-footer">
+                <span>LPU</span>
+                <span>Jan 2024</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section>
+        <h1 id="resume">Resume</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">
+          View my full qualifications below, or download a printable copy for your records.
+        </p>
+        
+        <div style="text-align: center; margin-bottom: 32px;">
+          <a href="/resume.pdf" download="Nitin_Biswas_Resume.pdf" class="btn" style="font-size: 1.1em; padding: 12px 32px;">[ DOWNLOAD PDF ]</a>
+        </div>
+
+        <div class="resume-container">
+          <div class="resume-header">
+            <span>RESUME.TXT</span>
+            <span>- □ x</span>
+          </div>
+          <div class="resume-content">
+            <h2 style="background: transparent; color: inherit; margin: 0; padding: 0;">Nitin Biswas</h2>
+            <div style="text-align: center; margin-bottom: 16px; font-weight: bold;">
+              Software Engineer | LPU
+            </div>
+
+            <h3>Education</h3>
+            <p><strong>Lovely Professional University (LPU)</strong><br />B.Tech in Computer Science and Engineering | Percentage: 74% | 2021-2025</p>
+            <p><strong>Guru Nanak Higher Secondary English School</strong><br />CBSE (XII) | Percentage: 81.2% | 2021</p>
+
+            <h3>Core Skills</h3>
+            <p><strong>Languages:</strong> Python, C++, C, Java, JavaScript</p>
+            <p><strong>Frameworks:</strong> HTML, CSS, Bootstrap, Node.js, MongoDB, Streamlit, TensorFlow, PyTorch</p>
+            <p><strong>Concepts:</strong> Operating System, Data Structures & Algorithms, Computer Networks</p>
+
+            <h3>Experience & Projects</h3>
+            <p><strong>AI Content Platform</strong> (Jan 25 - Feb 25)<br />Engineered a full-stack SaaS utilizing Next.js, Clerk Auth, and Gemini API to generate optimized social media content, processing thousands of requests daily.</p>
+            <p><strong>Customer Churn Prediction</strong> (Mar 2025)<br />Developed an ML pipeline using Scikit-Learn handling 100,000+ records to predict telecom churn based on usage demographics.</p>
+            <p><strong>Sign Language Translator</strong> (May 2024)<br />Created a real-time translator mapping hand gestures to English text via OpenCV and MediaPipe with 95% accuracy.</p>
+            
+            <p style="text-align: center; margin-top: 32px; font-weight: bold;">-- END OF FILE --</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1 id="contact">Get In Touch</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">
+          Want to collaborate or have a question? Reach out to me directly through any of the platforms below!
+        </p>
+
+        <div class="contact-grid-centered">
+          
+          <a href="mailto:nitinbiswas90@gmail.com" class="interactive-card">
+            <div class="contact-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Email" /></div>
+            <div class="contact-details">
+              <span class="contact-name">Email</span>
+              <span class="contact-value">nitinbiswas90@gmail.com</span>
+            </div>
+          </a>
+
+          <div class="interactive-card" style="cursor: default;">
+            <div class="contact-icon" style="font-family: inherit; font-size: 1.4em;">#</div>
+            <div class="contact-details">
+              <span class="contact-name">Phone</span>
+              <span class="contact-value">+91-7666293540</span>
+            </div>
+          </div>
+
+          <a href="https://www.linkedin.com/in/nitinbiswas" target="_blank" class="interactive-card">
+            <div class="contact-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></div>
+            <div class="contact-details">
+              <span class="contact-name">LinkedIn</span>
+              <span class="contact-value">/in/nitinbiswas</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Nitinbiswas1" target="_blank" class="interactive-card">
+            <div class="contact-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" /></div>
+            <div class="contact-details">
+              <span class="contact-name">GitHub</span>
+              <span class="contact-value">/Nitinbiswas1</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+    </main>
+
+    <input type="text" id="textarea" readonly />
+    <div id="loading">
+      <h2>Booting...</h2>
+      <div id="loading-bar">
+        <div id="loading-bar-progress"></div>
+      </div>
+      <div id="loading-items">Starting...</div>
+    </div>
+    <footer>
+      <div>Developed + Designed by Nitin Biswas.</div>
+      <div>Computer design based on the Commodore PET 8296.</div>
+      <div>COPYRIGHT © 2026 Nitin Biswas.</div>
+    </footer>
+    <script>
+      function closeMenu() {
+        document.getElementsByTagName("nav")[0].classList.remove(["active"]);
+      }
+
+      function toggleMenu() {
+        const nav = document.getElementsByTagName("nav")[0];
+        if (nav.classList.contains("active")) {
+          nav.classList.remove(["active"]);
+        } else {
+          nav.classList.add("active");
+        }
+      }
+    </script>
+    <script
+      fetchpriority="high"
+      src="https://cdn-ts.netlify.app/webgl-helper@3.0.11/webgl-helper.min.js"
+    ></script>
+  </body>
+</html>
